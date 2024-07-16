@@ -102,6 +102,7 @@ func (b *Builder) RepairRequired() bool {
 				b.Logger.Info(fmt.Sprintf("Repairing %s, item quantity is at %d", i.Name, quantity.Value))
 				return true
 			}
+			continue
 		}
 
 		currentDurability, currentDurabilityFound := i.FindStat(stat.Durability, 0)
